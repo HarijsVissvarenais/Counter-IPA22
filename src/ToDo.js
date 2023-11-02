@@ -1,10 +1,23 @@
 import { useState } from 'react';
-function ToDo() {
-    // const [todo, setTodo] = useState(todo);
-    return(
+
+function ToDo(props) {
+    const [check, setCheck] = useState(props.completed); // Access the 'completed' prop
+
+    function handleCheck(event) {
+        setCheck(event.target.checked);
+    }
+
+    return (
         <>
- <h1>Markuss ir OJ</h1>
+            <p>{props.title}</p>
+            <p>UzerId: {props.userId}</p>
+            <p>id: {props.id}</p>
+            <p>title: {props.title}</p>
+ 
+
+            <input type="checkbox" checked={check} onChange={handleCheck}></input>
         </>
     );
 }
+
 export default ToDo;

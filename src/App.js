@@ -1,6 +1,8 @@
 import Comment from "./Comment.js";
 import ToDo from "./ToDo.js";
 import { useState, useEffect } from "react";
+import Post from "./Post";
+import PostList from "./PostList";
 function App() {
   const [todo, setTodo] = useState({});
 
@@ -22,9 +24,9 @@ function App() {
   return (
     <div className="App">
 
-<Comment />
+{/* <Comment /> */}
       {/* {loading ? <p>Loading...</p> : <ToDo {...todo} />} */}
-
+<PostList />
 
     </div>
   );
